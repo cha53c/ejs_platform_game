@@ -1,2 +1,6 @@
 # ejs_platform_game
-Project from 2nd edition Eloquent Javascript
+Platform Game Project typed from 2nd edition Eloquent Javascript
+
+Provided as a single HTML page
+This is as almost an exact transcript - give or take a few curly braces for readability.
+
