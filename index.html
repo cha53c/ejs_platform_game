@@ -6,6 +6,17 @@
 <script type="text/javascript">
     console.log("running script");
 
+//     var simpleLevelPlan = `
+// ......................
+// ..#................#..
+// ..#..............=.#..
+// ..#.........o.o....#..
+// ..#.@......#####...#..
+// ..#####............#..
+// ......#++++++++++++#..
+// ......##############..
+// ......................`;
+
 
     var simpleLevelPlan = [
         "                      ",
@@ -15,7 +26,7 @@
         "  #         o o    #  ",
         "  #o@      #####   #  ",
         "  #####            #  ",
-        "      #!!!!!!!!!!!!#  ",
+        "      #++++++++++++#  ",
         "      ##############  ",
         "                      ",
     ];
@@ -42,7 +53,7 @@
                     this.actors.push(new Actor(new Vector(x, y), ch));
                 else if (ch == "#")
                     fieldType = "wall";
-                else if (ch == "!")
+                else if (ch == "+")
                     fieldType = "lava";
                 gridLine.push(fieldType);
             }
@@ -197,8 +208,9 @@
         this.size = new Vector(1, 1);
         if (ch == '=') {
             this.speed = new Vector(2, 0);
-        } else if (ch == "!") {
-            this.speed = new Vector(0, 2);
+        } else if (ch == "+") {
+            // set for easy version y was 2 in the book
+            this.speed = new Vector(0, 0);
         } else if (ch == 'v') {
             this.speed == new Vector(0, 3);
             this.repeatPos = pos;
@@ -305,7 +317,7 @@
     };
 
 
-    DOMDisplay.prototype.clear = function() {
+    DOMDisplay.prototype.clear = function () {
         this.wrap.parentNode.removeChild(this.wrap);
     };
 
