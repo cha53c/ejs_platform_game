@@ -7,9 +7,7 @@
   "devDependencies": {
     "jasmine": "^3.5.0"
   },
-  "scripts": {
-    "test": "test"
-  },
+  "scripts": { "test": "jasmine" },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cha53c/ejs_platform_game.git"
