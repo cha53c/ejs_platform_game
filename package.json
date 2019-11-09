@@ -1,0 +1,23 @@
+{
+  "name": "ejs_platform_game",
+  "version": "1.0.0",
+  "description": "Platform Game Project typed from 2nd edition Eloquent Javascript",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine": "^3.5.0"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cha53c/ejs_platform_game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cha53c/ejs_platform_game/issues"
+  },
+  "homepage": "https://github.com/cha53c/ejs_platform_game#readme"
+}
