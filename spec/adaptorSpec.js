@@ -1,4 +1,4 @@
-const LevelAdaptor = require("../js/adaptor");
+const LevelAdaptor = require("../js/level-adaptor");
 const GameLevels = require("../js/levels");
 
 describe("Transform 3rd edition level format to 2nd edition format", ()=>{

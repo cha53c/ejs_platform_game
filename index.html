@@ -1,6 +1,8 @@
 <html>
 <head>
     <link rel="stylesheet" href="css/game.css">
+    <script type="text/javascript" src="js/levels.js"></script>
+    <script type="text/javascript" src="js/level-adaptor.js"></script>
 </head>
 <body>
 <script type="text/javascript">
@@ -198,8 +200,11 @@
         } else if (ch == "!") {
             this.speed = new Vector(0, 2);
         } else if (ch == 'v') {
-            this.speed == new Vector(0, 3);
+            this.speed = new Vector(0, 3);
             this.repeatPos = pos;
+        } else {
+            this.speed = new Vector(0,0);
+            console.log("lava ch: " + ch);
         }
     }
 
@@ -378,7 +383,10 @@
     // var simpleLevel = new Level(simpleLevelPlan);
     // var display = new DOMDisplay(document.body, simpleLevel);
 
-    const GAME_LEVELS = [simpleLevelPlan];
+    let GAME_LEVELS;
+    // GAME_LEVELS = [simpleLevelPlan];
+    GAME_LEVELS = [LevelAdaptor.convertPlan(GAME_LEVELS_3rd_Ed[0])];
+
     runGame(GAME_LEVELS, DOMDisplay);
 </script>
 </body>
