@@ -363,6 +363,8 @@
 
     function runGame(plans, Display) {
         function startLevel(n) {
+            // convert 3d ed level to be compatible with this version
+            // 2nd ed plans should still work
             let level = new Level(LevelAdaptor.convertPlan(plans[n]));
             runLevel(level, Display, function (status) {
                 if (status == "lost")
