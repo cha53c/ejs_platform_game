@@ -291,7 +291,7 @@
     DOMDisplay.prototype.scrollPlayerIntoView = function () {
         var width = this.wrap.clientWidth;
         var height = this.wrap.clientHeight;
-        var margin = this.width / 3;
+        var margin = width / 3;
 
         var left = this.wrap.scrollLeft, right = left + width;
         var top = this.wrap.scrollTop, bottom = top + height;
