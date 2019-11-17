@@ -123,7 +123,6 @@
     function Vector(x, y) {
         this.x = x;
         this.y = y;
-
     }
 
     Vector.prototype.plus = function (other) {
@@ -187,9 +186,7 @@
         if (level.status == "lost") {
             this.pos.y += step;
             this.size.y -= step;
-
         }
-
     }
 
     function Lava(pos, ch) {
@@ -203,7 +200,7 @@
             this.speed = new Vector(0, 3);
             this.repeatPos = pos;
         } else {
-            this.speed = new Vector(0,0);
+            this.speed = new Vector(0, 0);
             console.log("lava ch: " + ch);
         }
     }
@@ -366,7 +363,8 @@
 
     function runGame(plans, Display) {
         function startLevel(n) {
-            runLevel(new Level(plans[n]), Display, function (status) {
+            let level = new Level(LevelAdaptor.convertPlan(plans[n]));
+            runLevel(level, Display, function (status) {
                 if (status == "lost")
                     startLevel(n);
                 else if (n < plans.length - 1)
@@ -375,7 +373,6 @@
                     console.log("You Win");
             });
         }
-
         startLevel(0);
     }
 
@@ -384,8 +381,8 @@
     // var display = new DOMDisplay(document.body, simpleLevel);
 
     let GAME_LEVELS;
-    // GAME_LEVELS = [simpleLevelPlan];
-    GAME_LEVELS = [LevelAdaptor.convertPlan(GAME_LEVELS_3rd_Ed[0])];
+    // GAME_LEVELS = [simpleLevelPlan]; // original plan from 2nd ed
+    GAME_LEVELS = GAME_LEVELS_3rd_Ed;
 
     runGame(GAME_LEVELS, DOMDisplay);
 </script>
